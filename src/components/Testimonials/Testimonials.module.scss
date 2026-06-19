@@ -1,0 +1,144 @@
+.testimonials {
+  background: white;
+  padding: 100px 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading h2 {
+  font-size: 42px;
+  color: #27577a;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.heading p {
+  font-size: 24px;
+  color: #3d6683;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imageSide {
+  position: relative;
+  height: 490px;
+}
+
+.mainImage {
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.badgeOne,
+.badgeTwo,
+.badgeThree {
+  position: absolute;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.badgeOne {
+  left: 30px;
+  top: 160px;
+}
+
+.badgeTwo {
+  left: 100px;
+  bottom: 90px;
+}
+
+.badgeThree {
+  right: 30px;
+  top: 220px;
+}
+
+.reviewCard {
+  background: #edf5f2;
+  padding: 60px;
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatarImg {
+  object-fit: cover;
+}
+
+.review {
+  margin: 40px 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #315d7b;
+  border-radius: 50px;
+}
+
+.reviewCard h4 {
+  font-size: 26px;
+  color: #315d7b;
+}
+
+.reviewCard span {
+  color: #6f7982;
+  font-size: 18px;
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #2c78bd;
+  background: transparent;
+  color: #2c78bd;
+  font-size: 34px;
+  cursor: pointer;
+
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+@media (max-width: 991px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .imageSide {
+    height: 400px;
+  }
+
+  .heading h2 {
+    font-size: 42px;
+  }
+
+  .reviewCard {
+    padding: 40px 25px;
+  }
+
+  .review {
+    font-size: 18px;
+  }
+}

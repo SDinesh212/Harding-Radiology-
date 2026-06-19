@@ -1,0 +1,200 @@
+@use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
+.aboutSection,
+.mriSection {
+  background: #4b86ad;
+  padding: 80px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* ===================================
+   CONTENT
+=================================== */
+
+.content h2 {
+  color: #ffffff;
+
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+}
+
+.content h2 span {
+  color: #48d9d2;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.infoBlock {
+  margin-bottom: 35px;
+}
+
+.infoBlock h3 {
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.aboutBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+
+  background: #47d9d1;
+  color: #ffffff;
+  text-decoration: none;
+
+  border: none;
+
+  padding: 18px 38px;
+
+  border-radius: 8px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.aboutBtn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   IMAGE
+=================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 700px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* ===================================
+   MRI SECTION
+=================================== */
+
+.mriImage {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+}
+
+.mriImage img,
+.mriImage :global(img) {
+  object-fit: contain;
+}
+
+.mriSection .content h4 {
+  margin-top: 60px;
+
+  color: #47d9d1;
+
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .imageWrapper {
+    height: 450px;
+  }
+
+  .mriImage {
+    height: 500px;
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+  .aboutSection,
+  .mriSection {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .infoBlock h3 {
+    font-size: 1.2rem;
+  }
+
+  .imageWrapper {
+    height: 300px;
+  }
+
+  .mriImage {
+    height: 320px;
+  }
+
+  .aboutBtn {
+    width: 100%;
+  }
+
+  .mriSection .content h4 {
+    font-size: 1.4rem;
+  }
+}

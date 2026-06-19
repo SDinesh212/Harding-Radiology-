@@ -1,0 +1,396 @@
+@use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 72px;
+
+  background: #183d53;
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  height: 100%;
+
+  padding: 0 clamp(16px, 1.25vw, 24px);
+
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 42px);
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.logo img,
+.logo :global(img) {
+  width: clamp(166px, 9.8vw, 188px);
+  height: auto;
+  max-height: 78px;
+}
+
+/* =========================================
+   DESKTOP MENU
+========================================= */
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: clamp(16px, 1.45vw, 28px);
+
+  margin-left: auto;
+
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.navMenu a {
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  text-decoration: none;
+}
+
+.bookBtn {
+  border: none;
+
+  background: #3f7fa5;
+  color: #ffffff;
+
+  min-width: 108px;
+  height: 38px;
+
+  padding: 0 16px;
+
+  border-radius: 4px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: #4d8db2;
+}
+
+/* =========================================
+   DESKTOP DROPDOWN
+========================================= */
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownTrigger {
+  background: transparent;
+  border: none;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+
+  top: calc(100% + 22px);
+  left: 0;
+
+  min-width: 200px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(12px);
+
+  transition: all 0.3s ease;
+
+  z-index: 9999;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.dropdownMenu a {
+  display: block;
+
+  color: #183d53;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 14px 18px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.dropdownMenu a:last-child {
+  border-bottom: none;
+}
+
+.dropdownMenu a:hover {
+  background: #f6fbff;
+  color: #2f7cb1;
+}
+
+/* =========================================
+   MOBILE ICONS
+========================================= */
+
+.mobileToggle {
+  display: none;
+
+  background: transparent;
+  border: none;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.callBtn {
+  display: none;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobileMenu {
+  position: absolute;
+
+  top: 72px;
+  left: 0;
+
+  width: 100%;
+
+  background: #183d53;
+
+  display: flex;
+  flex-direction: column;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: max-height 0.4s ease;
+}
+
+.active {
+  max-height: 1200px;
+}
+
+.mobileMenu a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  padding: 16px 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   MOBILE DROPDOWN
+========================================= */
+
+.mobileDropdownBtn {
+  width: 100%;
+
+  background: transparent;
+  border: none;
+
+  color: #ffffff;
+
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobileDropdown {
+  max-height: 0;
+
+  overflow: hidden;
+
+  background: #214d69;
+
+  transition: max-height 0.35s ease;
+}
+
+.showDropdown {
+  max-height: 500px;
+}
+
+.mobileDropdown a {
+  display: block;
+
+  padding: 14px 36px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.mobileBookBtn {
+  margin: 20px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: #3f7fa5;
+
+  color: #ffffff;
+
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1180px) {
+  .navMenu,
+  .bookBtn {
+    display: none;
+  }
+
+  .mobileToggle,
+  .callBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+  }
+
+  .callBtn {
+    margin-left: auto;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .logo img,
+  .logo :global(img) {
+    height: 85px;
+    width: auto;
+
+    max-height: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .mobileMenu {
+    top: 68px;
+  }
+
+  .logo img,
+  .logo :global(img) {
+    height: 80px;
+    width: auto;
+  }
+
+  .mobileMenu a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

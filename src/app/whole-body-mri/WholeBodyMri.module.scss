@@ -1,0 +1,739 @@
+.page {
+  --dark: #173f52;
+  --aqua: #42d7cf;
+  --pale: #dfe9e7;
+  --panel: #b5dfe1;
+  --cell: #e8ecef;
+
+  background: #ffffff;
+  color: var(--dark);
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 760px;
+  padding: 72px clamp(24px, 3.1vw, 60px) 150px;
+  display: flex;
+  align-items: center;
+  background: var(--pale);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 168px;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    var(--dark) 0%,
+    rgba(23, 63, 82, 0.94) 28%,
+    rgba(23, 63, 82, 0.25) 73%,
+    rgba(23, 63, 82, 0) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: 610px;
+}
+
+.heroContent h1 {
+  margin: 0 0 24px;
+  color: var(--dark);
+  font-size: 52px;
+  line-height: 1.28;
+  font-weight: 600;
+}
+
+.heroContent p {
+  max-width: 560px;
+  margin: 0 0 38px;
+  color: #06496f;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.heroContent a,
+.insightCard a,
+.planCard a,
+.ctaContent a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 28px;
+  border-radius: 8px;
+  background: var(--dark);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.heroImage {
+  position: absolute;
+  right: clamp(28px, 6.8vw, 132px);
+  bottom: 46px;
+  z-index: 1;
+  width: min(48vw, 640px);
+  height: min(70vh, 620px);
+  opacity: 0.92;
+}
+
+.heroImage img {
+  object-fit: contain;
+  object-position: right bottom;
+  mix-blend-mode: multiply;
+}
+
+.advancedSection {
+  background: var(--dark);
+  color: #ffffff;
+  padding: 104px 0 188px;
+}
+
+.advancedInner {
+  width: min(1115px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(360px, 450px) minmax(0, 1fr);
+  gap: clamp(46px, 5vw, 72px);
+  align-items: center;
+}
+
+.advancedImage {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.advancedImage img {
+  display: block;
+  width: 100%;
+  height: 452px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.advancedContent h2 {
+  margin: 0 0 24px;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1.22;
+  font-weight: 500;
+}
+
+.advancedContent h2 span,
+.advancedContent h3 {
+  color: var(--aqua);
+}
+
+.advancedContent p {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.advancedContent h3 {
+  max-width: 640px;
+  margin: 24px 0 0;
+  font-size: 22px;
+  line-height: 1.3;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.insightsSection {
+  background: linear-gradient(to bottom, var(--dark) 0 50%, #ffffff 50% 100%);
+  padding: 0 0 40px;
+}
+
+.insightCard {
+  position: relative;
+  z-index: 2;
+  width: min(1206px, calc(100% - 48px));
+  margin: -74px auto 0;
+  padding: 60px 40px 76px;
+  border-radius: 12px;
+  background: var(--panel);
+  text-align: center;
+}
+
+.insightCard h2 {
+  margin: 0 0 28px;
+  color: var(--dark);
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.insightSubtitle {
+  margin: 0 auto 76px;
+  color: #002d45;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.insightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(42px, 5vw, 72px);
+  margin-bottom: 72px;
+  text-align: left;
+}
+
+.insightItem img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  margin-bottom: 36px;
+}
+
+.insightItem span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 24px;
+  background: rgba(23, 63, 82, 0.32);
+}
+
+.insightItem h3 {
+  margin: 0 0 16px;
+  color: var(--dark);
+  font-size: 22px;
+  line-height: 1.22;
+  font-weight: 500;
+}
+
+.insightItem p {
+  margin: 0;
+  color: #002d45;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.compareSection {
+  background: #ffffff;
+  padding: 78px 0 82px;
+}
+
+.pricingIntro {
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto 62px;
+  text-align: center;
+}
+
+.pricingIntro h2 {
+  margin: 0 0 20px;
+  color: var(--dark);
+  font-size: clamp(39px, 3.1vw, 44px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.pricingIntro p {
+  margin: 0;
+  color: #06496f;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.compareTable {
+  width: min(990px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 330px repeat(2, minmax(0, 304px));
+  gap: 0 22px;
+  align-items: stretch;
+}
+
+.coveredHeading {
+  display: flex;
+  align-items: end;
+  min-height: 407px;
+  padding: 0;
+}
+
+.coveredHeading h2 {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(23, 63, 82, 0.35);
+  color: #002d45;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.planCard {
+  min-height: 407px;
+  padding: 29px 21px 22px;
+  border-radius: 8px 8px 0 0;
+  background: var(--cell);
+  color: #002d45;
+  display: flex;
+  flex-direction: column;
+}
+
+.planCard h3 {
+  margin: 0 0 18px;
+  font-size: 23px;
+  line-height: 1.28;
+  font-weight: 700;
+}
+
+.planCard p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+.planCard strong {
+  display: block;
+  margin: 0 0 26px;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.planCard strong span {
+  font-size: 12px;
+}
+
+.planCard a {
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.compareRow {
+  display: contents;
+}
+
+.featureLabel,
+.featureCell {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(23, 63, 82, 0.35);
+}
+
+.featureLabel {
+  color: #002d45;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.featureCell {
+  justify-content: center;
+  background: var(--cell);
+  color: var(--dark);
+}
+
+.planCard + .compareRow .featureLabel,
+.planCard + .compareRow .featureCell {
+  margin-top: 0;
+}
+
+.cta {
+  width: min(900px, calc(100% - 48px));
+  min-height: 282px;
+  margin: 0 auto 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--pale);
+}
+
+.ctaContent {
+  padding: 34px 28px;
+}
+
+.ctaContent h2 {
+  margin: 0 0 20px;
+  color: #002d45;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.ctaContent p {
+  max-width: 450px;
+  margin: 0 0 22px;
+  color: #6b8795;
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+.ctaContent a {
+  min-height: 48px;
+  padding: 0 25px;
+}
+
+.ctaImage {
+  position: relative;
+  min-height: 282px;
+  overflow: hidden;
+}
+
+.ctaImage::before {
+  content: "";
+  position: absolute;
+  right: 28px;
+  bottom: -72px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--dark);
+}
+
+.ctaImage img {
+  z-index: 1;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+@media (max-width: 1180px) {
+  .hero {
+    min-height: 660px;
+  }
+
+  .heroImage {
+    right: -34px;
+    width: 54vw;
+  }
+
+  .advancedInner {
+    grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  }
+
+  .insightCard {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: auto;
+    padding: 128px 24px 92px;
+    justify-content: center;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .hero::after {
+    height: 64px;
+    background: linear-gradient(
+      to top,
+      var(--dark) 0%,
+      rgba(23, 63, 82, 0.82) 44%,
+      rgba(23, 63, 82, 0) 100%
+    );
+  }
+
+  .heroContent h1 br {
+    display: none;
+  }
+
+  .heroContent p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .advancedSection {
+    padding: 82px 0 164px;
+  }
+
+  .advancedInner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .advancedImage {
+    width: min(560px, 100%);
+    margin: 0 auto;
+  }
+
+  .advancedContent h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .insightGrid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+    text-align: center;
+  }
+
+  .insightItem {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .insightItem img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .compareSection {
+    padding: 70px 0 70px;
+    background: #ffffff;
+  }
+
+  .pricingIntro {
+    margin-bottom: 54px;
+  }
+
+  .compareTable {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .coveredHeading {
+    grid-column: 1 / -1;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .coveredHeading h2 {
+    text-align: center;
+  }
+
+  .planCard {
+    min-height: 360px;
+  }
+
+  .compareRow {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 110px 110px;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .featureLabel,
+  .featureCell {
+    margin-top: 14px;
+  }
+
+  .featureLabel {
+    padding-right: 8px;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ctaContent p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ctaImage {
+    width: min(390px, 100%);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 116px 18px 82px;
+    height: 80vh;
+  }
+
+  .heroContent h1 {
+    font-size: 34px;
+    line-height: 1.24;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+
+  .advancedSection {
+    padding: 66px 0 132px;
+  }
+
+  .advancedInner {
+    width: calc(100% - 36px);
+    gap: 34px;
+  }
+
+  .advancedImage img {
+    height: 310px;
+  }
+
+  .advancedContent h2 {
+    font-size: 29px;
+  }
+
+  .advancedContent h2 br {
+    display: none;
+  }
+
+  .advancedContent p {
+    font-size: 15px;
+  }
+
+  .advancedContent h3 {
+    font-size: 18px;
+  }
+
+  .insightCard {
+    width: calc(100% - 36px);
+    margin-top: -64px;
+    padding: 42px 20px 48px;
+  }
+
+  .insightCard h2 {
+    font-size: 29px;
+  }
+
+  .insightCard h2 br,
+  .insightSubtitle br {
+    display: none;
+  }
+
+  .insightSubtitle {
+    margin-bottom: 48px;
+    font-size: 15px;
+  }
+
+  .compareSection {
+    padding: 58px 0 58px;
+    background: #ffffff;
+  }
+
+  .pricingIntro {
+    width: calc(100% - 36px);
+    margin-bottom: 44px;
+  }
+
+  .pricingIntro h2 {
+    font-size: 30px;
+  }
+
+  .pricingIntro p {
+    font-size: 15px;
+  }
+
+  .compareTable {
+    width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+  }
+
+  .planCard {
+    min-height: auto;
+    border-radius: 8px;
+  }
+
+  .compareRow {
+    grid-template-columns: 1fr 74px 74px;
+    gap: 10px;
+  }
+
+  .featureLabel,
+  .featureCell {
+    min-height: 72px;
+  }
+
+  .featureLabel {
+    font-size: 13px;
+  }
+
+  .featureCell {
+    border-radius: 4px;
+  }
+
+  .cta {
+    width: calc(100% - 36px);
+    margin-bottom: 54px;
+  }
+
+  .ctaContent {
+    padding: 32px 22px 22px;
+  }
+
+  .ctaContent h2 {
+    font-size: 25px;
+  }
+
+  .ctaContent h2 br {
+    display: none;
+  }
+
+  .ctaImage {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 104px 16px 76px;
+  }
+
+  .heroContent h1 {
+    font-size: 30px;
+  }
+
+  .heroContent a,
+  .insightCard a,
+  .ctaContent a {
+    min-height: 46px;
+    font-size: 15px;
+  }
+
+  .advancedImage img {
+    height: 250px;
+  }
+
+  .insightItem h3 {
+    font-size: 20px;
+  }
+
+  .compareRow {
+    grid-template-columns: 1fr 52px 52px;
+  }
+
+  .featureLabel {
+    font-size: 12px;
+  }
+
+  .featureCell svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    width: min(92%, 720px);
+    min-height: auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ctaContent p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ctaImage {
+    display: none;
+  }
+}

@@ -1,0 +1,167 @@
+.servicesSection {
+  background: white;
+  padding: 80px 20px 120px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  color: #29597a;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  min-height: 1100px;
+  margin: 0 auto;
+  padding: 60px clamp(40px, 6.7vw, 80px);
+  display: flex;
+  align-items: stretch;
+  gap: clamp(34px, 5.8vw, 70px);
+
+  background: linear-gradient(
+    135deg,
+    #7ea6c5 0%,
+    #7aa3c3 55%,
+    #87b0d1 100%
+  );
+}
+
+.leftColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.serviceItem {
+  border-top: 1px solid rgba(255, 255, 255, 0.85);
+  padding: 28px 0;
+
+  p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 500px;
+  }
+}
+
+.serviceTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+
+}
+
+.arrow {
+  font-size: 42px;
+}
+
+.rightColumn {
+  width: clamp(390px, 43vw, 520px);
+  min-height: 980px;
+  position: relative;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.stickyCard {
+  position: sticky;
+  top: 80px;
+
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+
+  display: flex;
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cardImage {
+  width: clamp(210px, 23vw, 280px);
+  height: 550px;
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.cardContent {
+  flex: 1;
+  padding: 55px 35px;
+
+  h3 {
+    color: #29597a;
+    font-size: 16px;
+    margin: 24px 0;
+  }
+
+  p {
+    color: #1d2e43;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    min-height: auto;
+    padding: 50px;
+    gap: 40px;
+  }
+
+  .rightColumn {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+    top: auto;
+  }
+
+  .stickyCard {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 42px;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  .stickyCard {
+    flex-direction: column;
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 280px;
+  }
+
+  .serviceTitle {
+    font-size: 24px;
+  }
+
+  .serviceItem p {
+    font-size: 16px;
+  }
+}

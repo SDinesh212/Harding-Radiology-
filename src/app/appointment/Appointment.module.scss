@@ -1,0 +1,327 @@
+.appointmentPage {
+  background: #ffffff;
+  color: #07384f;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  background: #dfe7e4;
+  padding: 118px 20px 120px;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 78px;
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 63, 82, 0),
+    rgba(23, 63, 82, 0.9) 65%,
+    #173f52
+  );
+}
+
+.heroContent {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 54px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #285f80;
+  margin: 0 0 28px;
+}
+
+.hero h1 span {
+  color: #42d2ca;
+}
+
+.hero p {
+  max-width: 980px;
+  margin: 0 auto 22px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #003b58;
+}
+
+.hero h3 {
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #003b58;
+  margin: 20px 0;
+}
+
+.hero h4 {
+  font-size: 23px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #003b58;
+  margin: 26px 0 0;
+}
+
+.hero a {
+  color: #003b58;
+  text-decoration: underline;
+}
+
+.formSection {
+  background: linear-gradient(to bottom, #173f52 0 48%, #ffffff 48% 100%);
+  padding: 0 0 110px;
+}
+
+.formOuter {
+  width: min(1050px, 88%);
+  margin: 0 auto;
+  background: #dfe7e4;
+  border-radius: 26px;
+  padding: 54px 90px 86px;
+}
+
+.formOuter h2 {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.32;
+  font-weight: 800;
+  color: #003b58;
+}
+
+.formCard {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 64px 44px 54px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.formGroupTitle {
+  margin: 0 0 24px;
+}
+
+.formGroupTitle h3 {
+  display: inline-block;
+  position: relative;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #003b58;
+  margin: 0;
+}
+
+.formGroupTitle h3::after {
+  content: "";
+  display: block;
+  width: 104px;
+  height: 1px;
+  background: #c7d8dc;
+  margin-top: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 30px;
+  margin-bottom: 34px;
+}
+
+.formCard label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #06496f;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.formCard input,
+.formCard select,
+.formCard textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #f4f7fb;
+  color: #07384f;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0 14px;
+}
+
+.formCard input,
+.formCard select {
+  height: 48px;
+}
+
+.formCard textarea {
+  height: 142px;
+  resize: vertical;
+  padding-top: 18px;
+}
+
+.formCard input::placeholder,
+.formCard textarea::placeholder {
+  color: #b9b7bc;
+}
+
+.full {
+  margin-bottom: 18px;
+}
+
+.recaptcha {
+  width: 286px;
+  height: 72px;
+  border: 1px solid #d5d5d5;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 12px;
+  margin: 8px 0 30px;
+  color: #111;
+}
+
+.recaptcha span {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #777;
+  background: #ffffff;
+}
+
+.recaptcha p {
+  margin: 0;
+  font-size: 14px;
+  color: #111;
+}
+
+.recaptcha small {
+  margin-left: auto;
+  font-size: 10px;
+  color: #777;
+}
+
+.formCard button {
+  width: 120px;
+  height: 42px;
+  border: 0;
+  border-radius: 4px;
+  background: #42d2ca;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(66, 210, 202, 0.3);
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 90px 24px 105px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .formOuter {
+    width: 92%;
+    padding: 46px 34px 64px;
+  }
+
+  .formCard {
+    padding: 48px 34px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 18px 95px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero h3 {
+    font-size: 20px;
+  }
+
+  .hero h4 {
+    font-size: 19px;
+  }
+
+  .formSection {
+    padding-bottom: 70px;
+  }
+
+  .formOuter {
+    width: 92%;
+    border-radius: 18px;
+    padding: 38px 18px 48px;
+  }
+
+  .formOuter h2 {
+    font-size: 19px;
+    margin-bottom: 38px;
+  }
+
+  .formCard {
+    padding: 36px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .recaptcha {
+    width: 100%;
+    max-width: 286px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero h3 {
+    font-size: 18px;
+  }
+
+  .hero h4 {
+    font-size: 17px;
+  }
+
+  .formOuter {
+    width: 94%;
+    padding: 32px 12px 42px;
+  }
+
+  .formCard {
+    padding: 30px 16px;
+  }
+
+  .formGroupTitle h3 {
+    font-size: 20px;
+  }
+}
