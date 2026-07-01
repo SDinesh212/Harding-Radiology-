@@ -133,12 +133,7 @@ export default function Mammography() {
 
       <section className={styles.videoSection}>
         <div className={styles.videoBox}>
-          <iframe
-            src="https://youtu.be/KU8Uz1x9xWM?si=hTj6NbsHB00YrKXy"
-            title="What is 3D Mammography?"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/KU8Uz1x9xWM?si=ZM1clBgz0rZc1Kwr" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
       </section>
 

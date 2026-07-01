@@ -34,12 +34,7 @@ export default function VideoSection() {
         </p>
 
         <div className={styles.videoWrapper}>
-          <iframe
-            src="https://youtu.be/eDTjxS5OKh0?si=VpYqqpyY2z48oNyh"
-            title="Radiology Center at Harding"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/eDTjxS5OKh0?si=KyajnnEsv52VNn9G" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
       </div>
     </section>

@@ -113,12 +113,7 @@ export default function Dexa() {
 
       <section className={styles.videoSection}>
         <div className={styles.videoBox}>
-          <iframe
-            src="https://youtu.be/Y7aum8ry3y4?si=e7brcUKPCjTnA7Om"
-            title="DEXA Scan Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7aum8ry3y4?si=xmQWdeItumBaOp7k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
       </section>
 
